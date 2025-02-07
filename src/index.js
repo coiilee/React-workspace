@@ -9,6 +9,7 @@ import ChapProps from "./Chapter/ChapProps";
 import PracticeProps from "./Practice/PracticeProps"
 import ChapArrowFunction from "./Chapter/ChapArrowFunction";
 import ChapPropsFunction from "./Chapter/ChapPropsFunction";
+import PracticePropsFunction from "./Practice/PracticePropsFunction";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -21,11 +22,12 @@ root.render(
         파일명.js 를 import 해서 사용할 수 있음
         */}
         <App/>
-            <ChapPropsFunction/>
+            {/*<ChapPropsFunction/>*/}
         {/*<ChapUseState/>*/}
         {/*<PracticeUseState />*/}
         {/*<ChapProps />*/}
         {/*<PracticeProps/>*/}
+            <PracticePropsFunction/>
     </React.StrictMode>
 );
 
