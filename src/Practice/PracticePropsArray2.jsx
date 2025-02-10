@@ -6,7 +6,7 @@ const PracticePropsArray2 = () => {
     )
 }
 
-const MusicPlay = ({ songs }) => {
+const MusicPlay = ({songs}) => {
     return (
         <div>
             <h2>🎵 음악 재생 목록</h2>
@@ -14,7 +14,7 @@ const MusicPlay = ({ songs }) => {
                 {
                     songs.map((songs,index)=> (
                         <div key={index}>
-                            제목: {songs.title}, 가수 : {songs.artist}
+                            제목: {songs.title || "재생 목록이 없습니다."} 가수 : {songs.artist}
                         </div>
                     ))
                 }
@@ -24,7 +24,7 @@ const MusicPlay = ({ songs }) => {
 };
 
 MusicPlay.defaultProps= {
-   songs: "재생 목록이 없습니다."
+   title: "재생 목록이 없습니다."
 }
 
 const Tod = ({ tasks }) => {
@@ -37,7 +37,7 @@ const Tod = ({ tasks }) => {
                         return(
                             <li key={index}>
                             <input type="checkbox" checked={tasks.done}/>
-                                할일: {tasks.task}
+                                할일: {tasks.task || "할 일이 없습니다."}
                             </li>
                         )
                     })
@@ -48,7 +48,7 @@ const Tod = ({ tasks }) => {
 };
 
 Tod.defaultProps = {
-    task: "할 일이 없습니다."
+  task: "할 일이 없습니다."
 }
 
 const TeamMembers = ({ teamMember }) => {
@@ -59,7 +59,7 @@ const TeamMembers = ({ teamMember }) => {
                 {
                     teamMember.map((teamMember,index)=>(
                         <div key={index}>
-                           이름: {teamMember.name}, 담당 직무 : {teamMember.role}
+                           이름: {teamMember.name || "등록된 팀원이 없습니다."} 담당 직무 : {teamMember.role}
                         </div>
                     ))
                 }
@@ -79,7 +79,7 @@ const ShoppingCart = ({ cartItems }) => {
             <ul>
                 {cartItems.map((cartItems,index)=>
                     (<div key={index}>
-                        품명: {cartItems.item} , 수량: {cartItems.quantity}
+                        품명: {cartItems.item || "장바구니가 비었습니다."} , 수량: {cartItems.quantity}
                     </div>
                     ))}
             </ul>
@@ -97,7 +97,7 @@ const EventSchedule = ({ events }) => {
             <ul>
                 {events.map((events,index)=> (
                     <div key={index}>
-                        행사명: {events.name}, 날짜: {events.date}
+                        행사명: {events.name }, 날짜: {events.date || "예정된 행사가 없습니다."}
                     </div>
                 ))
                 }
