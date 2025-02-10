@@ -23,13 +23,12 @@ const ChildOne = ({name,age}) => {
     )
 
 }
-const ChildTwo = () => {
+const ChildTwo = (props) => {
     return(
         <div>
-            <h2>사용자 목록</h2>
+            <h2>props로 가져온 사용자 목록</h2>
             <ul>
-                {/*배열 형식으로 단일 데이터가 아닌 2개 이상의 데이터를 표기할 것*/}
-
+                <li>{props.name} / {props.age}</li>
             </ul>
         </div>
     )
@@ -56,9 +55,9 @@ const Parent = () => {
         <>
             <h1>부모->자식 데이터를 전달 ( 기본 형태로 전달 )</h1>
             <ChildOne name="가나다" age={10}/>
-            <ChildTwo name="가나다" age={10}/>
-            <ChildThree/>
+            <ChildTwo name="마바사" age={20}/>
             <h1>부모->자식 데이터를 전달 ( 배열 형태로 전달 )</h1>
+            <ChildThree/>
         </>
     )
 }
