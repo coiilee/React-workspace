@@ -92,42 +92,42 @@ const APIRandomJoke = () => {
     )
 }
 
-//
-// const APIUser = () => {
-//
-//     const [user, setUser] = useState("");
-//
-//     const userBtn= () => {
-//         axios
-//             .get("https://randomuser.me/api/")
-//             .then(
-//                 (res)=> {
-//                     setUser(
-//                         res.data.results[0]
-//                     )
-//                 }
-//             )
-//             .catch(
-//                 ()=>{
-//                     alert("api 데이터 불러오기 실패")
-//                 }
-//             )
-//     }
-//
-//     useEffect( () => {
-//         userBtn();
-//     },[])
-//
-//     return(
-//         <div>
-//         <h1>유저 불러오기</h1>
-//             {user ? <p>{user.name.first}{user.name.last}</p> : <p>로딩중</p>}
-//             {user ? <p>{user.email}</p> : <p>로딩중</p>}
-//             {user ? <img src={user.picture.medium}/> : <p>로딩중</p>}
-//             <button onClick={userBtn} >유저 불러오기</button>
-//         </div>
-//     )
-// };
+
+const APIUser = () => {
+
+    const [user, setUser] = useState("");
+
+    const userBtn= () => {
+        axios
+            .get("https://randomuser.me/api/")
+            .then(
+                (res)=> {
+                    setUser(
+                        res.data.results[0]
+                    )
+                }
+            )
+            .catch(
+                ()=>{
+                    alert("api 데이터 불러오기 실패")
+                }
+            )
+    }
+
+    useEffect( () => {
+        userBtn();
+    },[])
+
+    return(
+        <div>
+        <h1>유저 불러오기</h1>
+            {user ? <p>{user.name.first}{user.name.last}</p> : <p>로딩중</p>}
+            {user ? <p>{user.email}</p> : <p>로딩중</p>}
+            {user ? <img src={user.picture.medium}/> : <p>로딩중</p>}
+            <button onClick={userBtn} >유저 불러오기</button>
+        </div>
+    )
+};
 
 
 const APIUser=()=>{
