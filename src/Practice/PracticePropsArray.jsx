@@ -1,4 +1,5 @@
 const PracticePropsArray = () => {
+
     return (
         <div>
             <Parent/>
@@ -89,6 +90,7 @@ const Book = ({books}) => {
 const Parent = () => {
 
     //부모 컴포넌트에서 전달할 데이터 작성하기
+
 
     const userList = [
         {name: "가나다", age: 5},
