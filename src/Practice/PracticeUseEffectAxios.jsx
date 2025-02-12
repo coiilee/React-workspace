@@ -130,12 +130,6 @@ const APIUser = () => {
 };
 
 
-const APIUser=()=>{
-
-}
-
-
-
 
 
 
